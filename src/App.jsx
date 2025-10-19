@@ -2,10 +2,12 @@ import "./assets/css/style.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
 import Index from "./pages/index.jsx";
 import Carrito from "./pages/Carrito.jsx";
 import Productos from "./pages/public/productos.jsx";
 import Iniciar from "./pages/public/iniciar.jsx";
+import Blogs from "./pages/public/blogs.jsx"
 
 import Admin_panel from "./pages/Admin_panel.jsx";
 import AdminProductos from "./pages/admin/productos/AdminProductos.jsx";
@@ -59,6 +61,7 @@ function App() {
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/productos" element={<Productos />} />
         <Route path="/iniciar_sesion" element={<Iniciar />} />
+        <Route path="/blogs" element={<Blogs />} />
 
         {/* Rutas de admin */}
         <Route path="/admin_panel" element={<Admin_panel />} />

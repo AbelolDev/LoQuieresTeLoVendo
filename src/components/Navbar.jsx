@@ -47,11 +47,10 @@ const Navbar = () => {
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/carrito">Mi carrito</Link></li>
             <li><Link to="/productos">Productos</Link></li>
+            <li><Link to="/blogs">Blogs</Link></li>
 
-            {/* Dinámico: Iniciar o Cerrar sesión */}
             {isLoggedIn ? (
               <li>
-                {/* Usamos <a> para mantener el mismo estilo visual */}
                 <a
                   href="#!"
                   onClick={handleLogout}
