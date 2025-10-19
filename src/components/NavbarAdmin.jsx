@@ -19,7 +19,7 @@ const NavbarAdmin = () => {
     navigate("/");
   };
 
-  const isActive = (path) => location.pathname === path ? "active" : "";
+  const isActive = (path) => (location.pathname === path ? "active" : "");
 
   return (
     <>
@@ -37,6 +37,9 @@ const NavbarAdmin = () => {
             <li className={isActive("/admin_panel/productos")}>
               <Link to="/admin_panel/productos">Productos</Link>
             </li>
+            <li className={isActive("/admin_panel/usuarios")}>
+              <Link to="/admin_panel/usuarios">Usuarios</Link>
+            </li>
             <li>
               <a
                 href="#!"
@@ -51,9 +54,13 @@ const NavbarAdmin = () => {
         </div>
       </nav>
 
+      {/* Sidenav para móviles */}
       <ul className="sidenav" id="mobile-demo">
         <li className={isActive("/admin_panel/productos")}>
           <Link to="/admin_panel/productos">Productos</Link>
+        </li>
+        <li className={isActive("/admin_panel/usuarios")}>
+          <Link to="/admin_panel/usuarios">Usuarios</Link>
         </li>
         <li>
           <a
